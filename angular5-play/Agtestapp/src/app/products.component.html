@@ -1,0 +1,12 @@
+        <h2>Products</h2>
+        <div *ngIf="products.length == 0; else productlist">
+            Nothing to display here Mr.
+        </div>
+        <ng-template #productlist>
+            <div *ngIf="products.length > 0">
+                <div *ngFor="let product of products">
+                    <product [data]="product"></product>
+                </div>
+            </div>
+        </ng-template>
+

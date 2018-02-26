@@ -1,0 +1,13 @@
+{{myValue}}
+
+    <i
+        class="glyphicon"
+        [class.glyphicon-thumbs-up]="myValue == 'What do you think?'"
+        [class.glyphicon-star]="myValue == 'Thanking you very much!  '"
+        (click)="onClick('Thanking you very much!  ')"
+    > </i>
+    <i
+    class="glyphicon"
+    [class.glyphicon-thumbs-down]="myValue == 'What do you think?'"
+    (click)="onClick('I hate you too!  ')"
+> </i>
